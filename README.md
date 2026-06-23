@@ -1,4 +1,4 @@
-# Biotvi-Blog-Rag-Agent
+# Bitovi-Blog-Rag-Agent
 
 An intelligent AI agent built with n8n that answers questions about Bitovi's blog content using Retrieval-Augmented Generation (RAG).
 
