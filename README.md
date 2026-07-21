@@ -115,3 +115,11 @@ The AI agent successfully handles various query types:
 **Tool Recommendations**
 - Extracts specific tool mentions from articles
 - Contextualizes recommendations with source attribution
+
+
+***Setup Notes***
+- Pinecone index must be a dense index (not the console's full-text/document builder). Create it via API/SDK with dimension 3072, metric cosine.
+- Both embedding nodes use models/gemini-embedding-001 (3072-dim).
+- Insert node's Embedding Batch Size must be 1 (gemini-embedding-001 accepts one input per call).
+- Chat model set to gemini-flash-Latest (older gemini-2.5-flash is retired for new accounts)
+
