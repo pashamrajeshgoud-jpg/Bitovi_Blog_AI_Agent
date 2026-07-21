@@ -325,7 +325,7 @@
           "mode": "list",
           "cachedResultName": "n8n-v4"
         },
-        "embeddingBatchSize": 1,
+        "embeddingBatchSize": 100,
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
@@ -710,7 +710,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "d4e6e3f4-de09-419b-a739-a57ef31e3912",
+  "versionId": "b6f96615-70ea-4408-81e3-024b5d94e5ee",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "eac6604dee12b824b72b585ebb29dfe9f45f8f0ca74a2d7b66821092dedf6456"
