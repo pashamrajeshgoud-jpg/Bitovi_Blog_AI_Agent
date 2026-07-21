@@ -8,10 +8,10 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.3,
       "position": [
-        -2112,
-        1696
+        -1040,
+        592
       ],
-      "id": "87e22f9a-bc7c-4234-b963-0f445239fae5",
+      "id": "99f63740-7ff0-4c4d-8391-ed451ea858ea",
       "name": "When chat message received",
       "webhookId": "ec5d5b53-9a8b-44ca-a5cb-4eb5e52af5b9"
     },
@@ -24,28 +24,29 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
-        -1792,
-        1696
+        -720,
+        592
       ],
-      "id": "6d4401fe-fc1e-4416-a4bb-84448f305473",
+      "id": "19cfae12-80aa-43a0-b784-42832d91f870",
       "name": "AI Agent"
     },
     {
       "parameters": {
+        "modelName": "models/gemini-flash-latest",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -1904,
-        1936
+        -832,
+        832
       ],
-      "id": "6232ee2a-0f8b-4d71-a20a-cc7caf13014c",
+      "id": "6ca11f7c-79c9-46dd-a55a-4f216ea804c4",
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "1l2Qm7XkUyA0TVkK",
-          "name": "Google Gemini(PaLM) Api account"
+          "id": "FrOQLyDjBBzcUVsL",
+          "name": "Google Gemini(PaLM) Api account 2"
         }
       }
     },
@@ -54,10 +55,10 @@
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        -1744,
-        1936
+        -672,
+        832
       ],
-      "id": "f303acaa-bc11-457f-be1b-d1fb12ac7121",
+      "id": "e44929a4-1f9f-46bb-b2b0-f725c60ceffa",
       "name": "Simple Memory"
     },
     {
@@ -66,9 +67,9 @@
         "toolDescription": "call this tool to answer user questions",
         "pineconeIndex": {
           "__rl": true,
-          "value": "n8n-v2",
+          "value": "n8n-v4",
           "mode": "list",
-          "cachedResultName": "n8n-v2"
+          "cachedResultName": "n8n-v4"
         },
         "topK": 500,
         "options": {}
@@ -76,15 +77,15 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
       "typeVersion": 1.3,
       "position": [
-        -1488,
-        1872
+        -416,
+        768
       ],
-      "id": "b0c64cc4-51f6-4c10-aee6-4c914c0e8df9",
+      "id": "9bebd15e-a14b-4012-9afb-4b58f139a6c8",
       "name": "Pinecone Vector Store1",
       "credentials": {
         "pineconeApi": {
-          "id": "w6NQTOcfSkpYZNxU",
-          "name": "PineconeApi account"
+          "id": "SQIOtxLIOm2FO4S8",
+          "name": "Pinecone account"
         }
       }
     },
@@ -93,15 +94,15 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -1472,
-        2048
+        -400,
+        944
       ],
-      "id": "ea36ad2e-da4a-4a81-84d6-ae3245e59f4f",
+      "id": "25bdcc33-31fc-43d2-86d3-83952cc4239d",
       "name": "Embeddings Google Gemini1",
       "credentials": {
         "googlePalmApi": {
-          "id": "1l2Qm7XkUyA0TVkK",
-          "name": "Google Gemini(PaLM) Api account"
+          "id": "FrOQLyDjBBzcUVsL",
+          "name": "Google Gemini(PaLM) Api account 2"
         }
       }
     },
@@ -114,10 +115,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -2288,
-        960
+        -1216,
+        -144
       ],
-      "id": "5a3ba1cb-9300-408a-9378-70100f795879",
+      "id": "7510016c-7610-41e9-9054-5d5f933aafcd",
       "name": "Params"
     },
     {
@@ -128,10 +129,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -2144,
-        1168
+        -1072,
+        64
       ],
-      "id": "92303f70-3578-4176-ba04-5742a7c9bf18",
+      "id": "6c47eff3-e452-4e6e-b366-42e40d1e0b8e",
       "name": "Scrape Page",
       "retryOnFail": false,
       "onError": "continueErrorOutput"
@@ -164,10 +165,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1072,
-        944
+        0,
+        -160
       ],
-      "id": "cadd9914-c21c-428c-ae21-bf3369e213e4",
+      "id": "34776ff2-01af-4716-abb8-399ee250b77d",
       "name": "Has More Pages?"
     },
     {
@@ -179,10 +180,10 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        -1312,
-        944
+        -240,
+        -160
       ],
-      "id": "a70ea879-db8f-4183-9e61-0dd8a0922234",
+      "id": "29d51246-f4ee-43c0-9c0e-39d62cbd6b62",
       "name": "Merge2"
     },
     {
@@ -196,24 +197,23 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        -2496,
-        960
+        -1424,
+        -144
       ],
-      "id": "6f481fae-42a1-4ca8-acab-eaed7cac1150",
+      "id": "2f27eee8-28ea-4642-9cbe-5cf984e5554a",
       "name": "Schedule Trigger"
     },
     {
       "parameters": {
-        "language": "python",
-        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor item in _input.all():\n  item.json.blogLink = list(set(item.json.blogLink))\nreturn _input.all()"
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.blogLink = [...new Set(item.json.blogLink)];\n}\nreturn $input.all();"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1504,
-        1136
+        -432,
+        32
       ],
-      "id": "5f0282be-73c5-4521-941c-763391112ac7",
+      "id": "1bad90a1-c444-47c4-9e1d-fc366de2bf74",
       "name": "Delete Duplicates"
     },
     {
@@ -223,10 +223,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -784,
-        928
+        288,
+        -176
       ],
-      "id": "890f0f42-b0b3-40a6-90cb-e39c05c688b5",
+      "id": "0da2d872-80f7-4eeb-9ff4-60cb32d37aae",
       "name": "Page Incrementer"
     },
     {
@@ -257,10 +257,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1888,
-        1152
+        -816,
+        48
       ],
-      "id": "1730edbb-561c-4e64-b6e9-cca5a91e4fac",
+      "id": "1b76c2aa-b436-45ae-95d3-f67f48c7d7d7",
       "name": "Check If Pages finished"
     },
     {
@@ -297,10 +297,10 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        -1680,
-        1136
+        -608,
+        32
       ],
-      "id": "4a46bbdf-5826-42b1-907e-16f7cbbbc386",
+      "id": "43b2c1f7-48d4-45a1-8ea9-e6fcb5faf890",
       "name": "Extract HTML Contents"
     },
     {
@@ -310,10 +310,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1296,
-        1232
+        -224,
+        128
       ],
-      "id": "62bcc360-05db-49ad-88f2-b649de1b2878",
+      "id": "a5abff5e-45b4-4624-9032-84b20a64b0f5",
       "name": "Flatten"
     },
     {
@@ -321,25 +321,25 @@
         "mode": "insert",
         "pineconeIndex": {
           "__rl": true,
-          "value": "n8n-v2",
+          "value": "n8n-v4",
           "mode": "list",
-          "cachedResultName": "n8n-v2"
+          "cachedResultName": "n8n-v4"
         },
-        "embeddingBatchSize": 800,
+        "embeddingBatchSize": 1,
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
       "typeVersion": 1.3,
       "position": [
-        -448,
-        1280
+        624,
+        176
       ],
-      "id": "02f25f7d-f582-472b-a523-00b392e93079",
+      "id": "363dbb0d-cbc9-4987-bf02-89b69550f0e7",
       "name": "Pinecone Vector Store2",
       "credentials": {
         "pineconeApi": {
-          "id": "w6NQTOcfSkpYZNxU",
-          "name": "PineconeApi account"
+          "id": "SQIOtxLIOm2FO4S8",
+          "name": "Pinecone account"
         }
       }
     },
@@ -348,15 +348,15 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -528,
-        1456
+        544,
+        352
       ],
-      "id": "887cff45-b99d-4519-b98d-ed94fb26abef",
+      "id": "64347462-db53-430b-980b-ca6590ed15c6",
       "name": "Embeddings Google Gemini2",
       "credentials": {
         "googlePalmApi": {
-          "id": "1l2Qm7XkUyA0TVkK",
-          "name": "Google Gemini(PaLM) Api account"
+          "id": "FrOQLyDjBBzcUVsL",
+          "name": "Google Gemini(PaLM) Api account 2"
         }
       }
     },
@@ -391,10 +391,10 @@
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1.1,
       "position": [
-        -320,
-        1472
+        752,
+        368
       ],
-      "id": "d8f4de51-f8e3-4cce-809c-608a4bfbc3d7",
+      "id": "75662862-cceb-4402-a077-7113a23800e1",
       "name": "Default Data Loader1"
     },
     {
@@ -404,10 +404,10 @@
       "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
       "typeVersion": 1,
       "position": [
-        -352,
-        1632
+        720,
+        528
       ],
-      "id": "6e1c5d5d-cc72-4b48-a09b-c827b872ca32",
+      "id": "2c8f8601-a160-4cf1-bce0-9d317936d659",
       "name": "Recursive Character Text Splitter1"
     },
     {
@@ -418,10 +418,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -1072,
-        1168
+        0,
+        64
       ],
-      "id": "fa153274-d728-4dcf-965d-cb02db5941c1",
+      "id": "c1fb1609-fdfe-4044-83fc-e0a48978da3f",
       "name": "HTTP Request1",
       "retryOnFail": true,
       "onError": "continueErrorOutput"
@@ -433,10 +433,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -848,
-        1152
+        224,
+        48
       ],
-      "id": "d761971a-e911-46e9-ba46-9338cf3d071a",
+      "id": "62ebd044-116b-4879-9e59-81995ec8f772",
       "name": "Html to Text1"
     },
     {
@@ -448,10 +448,10 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        -736,
-        1360
+        336,
+        256
       ],
-      "id": "23119cf1-78c0-4151-b6cd-ff352a7ce853",
+      "id": "8f4f1f1b-3551-4bb5-b9d6-7b4241b10d7b",
       "name": "Merge With MetaData"
     }
   ],
@@ -692,11 +692,6 @@
         ]
       ]
     },
-    "AI Agent": {
-      "main": [
-        []
-      ]
-    },
     "Merge With MetaData": {
       "main": [
         [
@@ -711,13 +706,16 @@
   },
   "active": false,
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
   },
-  "versionId": "45af8878-4675-4a9a-a44e-a776562cca4b",
+  "versionId": "d4e6e3f4-de09-419b-a739-a57ef31e3912",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "ced7d08e77fe1fb5cbe533c358e4500cb0541e3867bfb0d86055706a788b2932"
+    "instanceId": "eac6604dee12b824b72b585ebb29dfe9f45f8f0ca74a2d7b66821092dedf6456"
   },
-  "id": "jHrR7sqs4WXNovCf",
+  "nodeGroups": [],
+  "id": "wKs72b9jd5mr6Ogt",
   "tags": []
 }
